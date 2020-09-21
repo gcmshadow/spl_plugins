@@ -1,0 +1,24 @@
+setupRequired(obs_sdss)
+setupRequired(meas_extensions_simpleShape)
+setupRequired(display_ds9)
+setupRequired(display_firefly)
+setupRequired(display_matplotlib)
+setupRequired(meas_extensions_convolved)
+setupRequired(obs_ctio0m9)
+setupRequired(obs_cfht)
+setupRequired(obs_decam)
+setupRequired(obs_subaru)
+
+envPrepend(PATH, ${PRODUCT_DIR}/bin)
+envPrepend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(LSST_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
+
+# firefly_client                   -- indirectly resolved via display_firefly
+# meas_extensions_photometryKron   -- indirectly resolved via meas_extensions_convolved
+# obs_decam_data                   -- indirectly resolved via obs_decam
+# obs_subaru_data                  -- indirectly resolved via obs_subaru
+# meas_modelfit                    -- indirectly resolved via obs_subaru
+# meas_extensions_psfex            -- indirectly resolved via obs_subaru
+# meas_extensions_shapeHSM         -- indirectly resolved via obs_subaru
