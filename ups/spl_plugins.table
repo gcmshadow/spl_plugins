@@ -20,5 +20,4 @@ envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 # obs_decam_data                   -- indirectly resolved via obs_decam
 # obs_subaru_data                  -- indirectly resolved via obs_subaru
 # meas_modelfit                    -- indirectly resolved via obs_subaru
-# meas_extensions_psfex            -- indirectly resolved via obs_subaru
 # meas_extensions_shapeHSM         -- indirectly resolved via obs_subaru
